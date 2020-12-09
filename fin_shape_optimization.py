@@ -4,7 +4,7 @@ from tensorflow import keras
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
 # feed forward policy neural network
-def build_policy_model(sizes, activation=tf.nn.relu, output_activation=tf.nn.sigmoid):
+def build_policy_model(sizes, activation=tf.nn.relu, output_activation=tf.nn.tanh):
     pi_layers=[]
     for size in sizes[:-1]:
         pi_layers.append(keras.layers.Dense(size, activation=activation))
